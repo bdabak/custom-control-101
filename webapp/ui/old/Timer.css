@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;500;700&display=swap");
+
+.smod-timer {
+  font-family: "Roboto Mono", monospace;
+  border: 1px solid #222;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.smod-timer-digits {
+  font-weight: 200;
+  font-size: 40px;
+}
+.smod-timer-colon {
+  font-weight: 300;
+  font-size: 40px;
+}
+
+.smod-timer-button {
+  width: 70px;
+  height: 70px;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.smod-timer-button:hover {
+  box-shadow: 1px 1px 12px rgba(48, 48, 48, 0.29);
+  background-color: #e8e8e8;
+  border-radius: 4px;
+}
+
+.smod-timer-stopped:before {
+  font-family: "SAP-icons";
+  content: attr(data-sap-ui-icon-content-play);
+}
+.smod-timer-playing:before {
+  font-family: "SAP-icons";
+  content: attr(data-sap-ui-icon-content-pause);
+}
+
+.smod-timer-status {
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.smod-timer-status-none {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #222;
+  box-shadow: #000 0 -1px 6px 1px;
+}
+
+.smod-timer-status-green {
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+  background-color: #222;
+  border-radius: 50%;
+  box-shadow: #000 0 -1px 6px 1px, inset rgb(67, 67, 67) 0 -1px 8px,
+    #adadad 0 3px 11px;
+  animation: blinkGreen 1s infinite;
+}
+
+@keyframes blinkGreen {
+  from {
+    background-color: #222;
+  }
+  50% {
+    background-color: #77e30c;
+    box-shadow: #0000006d 0 -1px 6px 1px, inset #460 0 -1px 8px,
+      #77e30c 0 3px 11px;
+  }
+  to {
+    background-color: #222;
+  }
+}

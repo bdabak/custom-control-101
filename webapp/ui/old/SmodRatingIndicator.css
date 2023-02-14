@@ -1,0 +1,120 @@
+.smod-rating-container {
+  display: block;
+  margin: 1rem;
+}
+
+.smod-rating-group {
+  display: inline-flex;
+  align-items: center;
+}
+
+.smod-rating-value-text {
+  margin-left: 20px;
+  padding: 0.5rem 0.5rem;
+  /* box-shadow: 1px 1px 5px rgb(0 0 0 / 20%); */
+  border-radius: 3px;
+  color: whitesmoke;
+  background-color: rgb(66 67 88);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.smod-rating-value-text.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.smod-rating-item-label {
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0 0.1em;
+  text-align: center;
+  position: relative;
+}
+.smod-rating-item-label.disabled {
+  cursor: not-allowed !important;
+}
+
+.smod-rating-item-label.initial,
+.smod-rating-item-input.initial {
+  visibility: hidden;
+}
+
+.smod-rating-item-label::before,
+.smod-rating-item-label::after {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 15px;
+}
+
+.smod-rating-item-label::before {
+  content: attr(data-tooltip);
+  font-size: 1rem;
+  z-index: 2;
+  min-width: 100px;
+  max-width: 300px;
+  color: whitesmoke;
+  background-color: rgb(66 67 88);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.smod-rating-item-label::after {
+  content: "";
+  width: 0;
+  height: 0;
+  margin-top: 0.5rem;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 7px solid rgb(66 67 88);
+}
+
+.smod-rating-item-label:hover::before,
+.smod-rating-item-label:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.smod-rating-item-icon::before {
+  font-family: SAP-icons;
+  content: "";
+}
+
+.smod-rating-item-icon {
+  color: #ddd;
+  display: inline-block;
+  font: normal normal normal 14px/1 SAP-icons;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  transition: color 0.2s ease-in-out;
+}
+
+.disabled .smod-rating-item-icon {
+  color: rgb(132, 132, 132);
+}
+
+.disabled .smod-rating-item-icon.active {
+  color: rgb(216, 129, 7);
+}
+
+.smod-rating-item-icon.active {
+  color: orange;
+}
+
+.smod-rating-item-input {
+  display: none;
+}
+
+.hover-active {
+  color: orange !important;
+}
+
+.hover-passive {
+  color: #ddd !important;
+}

@@ -1,0 +1,54 @@
+<mvc:View controllerName="com.smod.controls.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:smod="com.smod.controls.ui">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <!-- <smod:StarRating id="idRatingIndicator1" selectedValue="{viewModel>/selectedRating}" ratingItems="{path:'viewModel>/ratingValueList', templateShareable:false}" change=".onValueChanged">
+                <smod:ratingItems>
+                    <smod:SmodRatingItem value="{viewModel>value}" valueText="{viewModel>valueText}"/>
+                </smod:ratingItems>
+            </smod:SmodRatingIndicator>
+
+            <smod:SmodRatingIndicator id="idRatingIndicator2" selectedValue="{viewModel>/selectedRating2}" ratingItems="{path:'viewModel>/ratingValueList', templateShareable:false}" editable="false">
+                <smod:ratingItems>
+                    <smod:SmodRatingItem value="{viewModel>value}" valueText="{viewModel>valueText}"/>
+                </smod:ratingItems>
+            </smod:SmodRatingIndicator> -->
+            <!-- <smod:StarRating id="idRatingIndicator1" selectedValue="{viewModel>/selectedRating}" ratingItems="{path:'viewModel>/ratingValueList', templateShareable:false}" change=".onValueChanged" radioName="radio-1">
+                <smod:ratingItems>
+                    <smod:StarRatingItem value="{viewModel>value}" valueText="{viewModel>valueText}"/>
+                </smod:ratingItems>
+            </smod:StarRating>
+
+            <smod:StarRating id="idRatingIndicator2" selectedValue="{viewModel>/selectedRating2}" ratingItems="{path:'viewModel>/ratingValueList', templateShareable:false}" editable="false" radioName="radio-2">
+                <smod:ratingItems>
+                    <smod:StarRatingItem value="{viewModel>value}" valueText="{viewModel>valueText}"/>
+                </smod:ratingItems>
+            </smod:StarRating> -->
+
+            <!-- <smod:ScaleEntrance editable="true" scaleList="{viewModel>/scaleValueList}" scaleValue="{viewModel>/scaleValue}" />
+            <Text text="{viewModel>/scaleValue}" /> -->
+            <!-- <FlexBox width="100%" class="sapUiResponsivePadding" alignContent="Center" justifyContent="Center"> -->
+            <!-- <Button press=".onShowHierarchy" text="Objective Path" class="sapUiLargeMarginTopBottom" /> -->
+            <!-- </FlexBox> -->
+            <!-- <smod:AmChart id="myPieGraph" chartData="{viewModel>/pieChartData}"/>
+
+            <Button press=".onModifyGraphData" text="Modify" /> -->
+            <!-- <l:Grid id="timerGrid" content="{viewModel>/counterValues}">
+               
+                <l:content>
+                    <smod:Counter id="counter1" value="{viewModel>value}" change=".onValueChange"/>
+                </l:content>
+            </l:Grid> -->
+
+            <l:Grid id="timerGrid">
+                <smod:Timer id="timer1" title="Some title"/>
+
+
+            </l:Grid>
+
+        </content>
+    </Page>
+</mvc:View>
